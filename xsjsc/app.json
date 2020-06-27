@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sorts/sorts",
+    "pages/cart_shop/cart_shop",
+    "pages/mine/mine",
+    "pages/start/start",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#95ebd2",
+    "navigationBarTitleText": "新饰纪商城",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#95ebd2",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#95ebd2",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home2.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/sorts/sorts",
+        "text": "分类",
+        "iconPath": "images/sorts2.png",
+        "selectedIconPath": "images/sorts1.png"
+      },
+      {
+        "pagePath": "pages/cart_shop/cart_shop",
+        "text": "购物车",
+        "iconPath": "images/cartShop1.png",
+        "selectedIconPath": "images/cartShop2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine2.png",
+        "selectedIconPath": "images/mine1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
