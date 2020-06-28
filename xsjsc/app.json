@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/start/start",
     "pages/index/index",
     "pages/sorts/sorts",
     "pages/cart_shop/cart_shop",
     "pages/mine/mine",
-    "pages/start/start",
     "pages/logs/logs"
   ],
   "window": {

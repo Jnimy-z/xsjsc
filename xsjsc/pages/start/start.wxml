@@ -1,2 +1,23 @@
 <!--pages/start/start.wxml-->
-<text>pages/start/start.wxml</text>
+<view class="container">
+  <block>
+    <image class="logo" src="/images/logo.png"></image>
+  </block>
+  <view class="content">
+    <view class="mid_box">
+      <view class="avater">
+        <!-- <open-data type="userAvaterUrl"></open-data> -->
+        <image class="avaterImg" bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </view>
+      <image class="wave" src="/images/wave.png"></image>
+      <image class="wave wave-bg" src="/images/wave.png"></image>
+    </view>
+    <view class="bottom_box">
+      <image class="ader" src="/images/adver.jpg"></image>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="btn_shop">
+        <text>进入饰品店</text>
+      </button>
+      <text class="copyright">Power By 张娟</text>
+    </view>
+  </view>
+</view>

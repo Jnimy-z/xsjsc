@@ -1,2 +1,7 @@
 <!--pages/sorts/sorts.wxml-->
-<text>{{msg}}</text>
+<view wx:for="{{arr}}" wx:for-item="a" style="display: flex; flex-direction: row;">
+    <view wx:for="{{arr}}" wx:for-item="b">
+      <view wx:if="{{a >= b}}" style="font-size: 9px"><text decode="ensp">{{a}}*{{b}}={{a*b}}&ensp;</text></view>
+    </view>
+</view>
+
