@@ -1,18 +1,66 @@
 // pages/mine/mine.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    userInfo: {}
+  },
+  logouttap:function(){
+    wx.redirectTo({
+      url: '/pages/start/start',
+    })
+  },
 
+  /**
+   * 跳转到订单界面
+   * @param {*} options 
+   */
+  goToOrder:function(){
+    wx.navigateTo({
+      url: '/pages/orders/orders',
+    })
+  },
+  /**
+   * 跳转到地址界面
+   * @param {*} options 
+   */
+  goToAddress:function(){
+    wx.navigateTo({
+      url: '/pages/address/address',
+    })
+  },
+  /**
+   * 跳转到收藏界面
+   * @param {*} options 
+   */
+  goToCollection:function(){
+    wx.navigateTo({
+      url: '/pages/collection/collection',
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(app.globalData.userInfo)
+    if(app.globalData.userInfo){
+      this.setData({
+        userInfo: app.globalData.userInfo
+      })
+    }else{
+      wx.getUserInfo({
+        success: res=>{
+          app.globalData.userInfo=res.userInfo
+          this.setData({
+            userInfo: res.userInfo
+          })
+        },
+      })
+    }
   },
 
   /**
@@ -40,7 +88,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    
   },
 
   /**

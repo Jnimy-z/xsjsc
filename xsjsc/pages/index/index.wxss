@@ -1,21 +1,258 @@
 /**index.wxss**/
-.userinfo {
+view{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  background-color: #faefae;
+  min-height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0
+}
+/* 头部 */
+.header{
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
+}
+.header .bg{
+  width: 100%;
+  height: 23px;
+}
+.header .ad{
+  width: 100%;
+  height: 66px;
+}
+/* 搜索框 */
+.search-view{
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  /* 弹性盒子 垂直排列 */
+  flex-direction: column;
+}
+.search-content{
+  background-color: rgb(255, 255, 255);
+  width: 95%;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  padding-left: 10rpx;
+  margin: auto;
+  height: 60rpx;
+  border-radius: 60rpx;
+}
+.search-icon{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+}
+.search-input{
+  width: 88%;
+  font-size: 28rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+/* 轮播图样式 */
+.swiper-container{
+  width: 96%;
+  height: 400rpx;
+  position: relative;
+  padding-bottom: 20rpx;
+}
+.swiper-box{
+  width: 100%;
+  height: 400rpx;
+  border-radius: 6px;
+  overflow: hidden;
+  transform: translateY(0);
+}
+.slide-image{
+  width: 100%;
+  height: 400rpx;
+  display: inline-block;
+  overflow: hidden;
+}
+/* 图标分类样式 */
+.iconlist-box{
+  background-color: #fff;
+  width: 96%;
+  border-radius: 10rpx;
+}
+.iconlist-item{
+  width: 20%;
+  margin-left: 10px;
+  margin-top: 10px;
+  float: left;
+}
+.iconlist-item image{
+  padding: 0;
+  padding-left: 15px;
+  width: 30px;
+  height: 30px;
+}
+.iconlist-item text{
+  display: block;
+  font-size: 11px;
+  color: black;
+  margin-top: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* 新闻动态 */
+.index-news{
+  width: 96%;
+  height: auto;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx 0;
+  border-radius: 10rpx;
+}
+.index-news-list{
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-top: 1rpx solid #eefeff;
+  font-size: 12px;
+}
+.index-news-list:last-child{
+  border-bottom: 1rpx solid #eefeff;
+}
+.index-news-list image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  opacity: .25;
+  margin-top: 15rpx;
+  padding: 0 20rpx;
+}
+.index-news-list image:first-child{
+  float: left;
+}
+.index-news-list image:last-child{
+  float: right;
+}
+/* 精选推荐 */
+.index-module{
+  width: 96%;
+  height: auto;
+  position: relative;
+  top: 20rpx;
+  margin: 10rpx auto;
+  border-radius: 10rpx;
+  padding-bottom: 20rpx;
+  background-color: #fff;
+}
+.index-module-tit{
+  padding: 16rpx;
+  line-height: 36rpx;
+  font-size: 36rpx;
+  border-left: 2px solid red;
+  margin: 10rpx 20rpx;
+}
+.index-module-con{
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.left-text{
+  color: #494949;
+}
+.right-text{
+  color: #41be57;
+  float: right;
+}
+.model-scroll-view{
+  width: 100%;
+  /* height: 600rpx; */
+  white-space: nowrap;
+  display: flex;
+}
+.item-group{
+  width: 320rpx;
+  display: inline-block;
+  height: auto;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  border: 1rpx solid #ececec;
+  box-shadow: 0 0 3rpx rgba(0, 0, 0, .5);
+}
+/* .item-group:first-child{
+  margin-left: 20rpx;
+} */
+.img-group{
+  width: 100%;
+}
+.img-group image{
+  width: 100%;
+  height: 320rpx;
+}
+.item-title{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  /* 文字超出部分显示为... */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+/**商家推荐**/
+.index-module-sug{
+  width: 100%;
+  height: auto;
+} 
+.index-module-title{
+  line-height: 56rpx;
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 40rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.textline{
+  color: red;
+}
+
+.item-groups{
+  display: inline-block;
+  width: 340rpx;
+  margin: 20rpx auto;
+  height: auto;
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin: 17rpx 17rpx 0 17rpx;
+}
+
+
+.img-groups image{
+  width: 100%;
+  border-radius: 16rpx;
+  height: 340rpx;
+  margin: 0 auto;
+}
+.itemSugname{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 14px;
+  /* 文字超出部分显示为... */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bottom-text{
+  font-size: 29rpx;
+  color: #494949;
+}
+
+.priceSug{
+  color: red;
+  font-size: 30rpx;
+}
+.personSug{
+  font-size: 30rpx;
+  float: right;
 }

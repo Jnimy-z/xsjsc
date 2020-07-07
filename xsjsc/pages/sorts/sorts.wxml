@@ -1,7 +1,39 @@
 <!--pages/sorts/sorts.wxml-->
-<view wx:for="{{arr}}" wx:for-item="a" style="display: flex; flex-direction: row;">
-    <view wx:for="{{arr}}" wx:for-item="b">
-      <view wx:if="{{a >= b}}" style="font-size: 9px"><text decode="ensp">{{a}}*{{b}}={{a*b}}&ensp;</text></view>
+<view class="container">
+    <view class="search-view">
+      <view class="search-content">
+        <image src="/images/index/Search.png" class="search-icon"></image>
+        <!-- bindtap点击时触发toSearch方法 -->
+        <input class="search-input" bindtap="toSearch" placeholder="Olay"></input>
+      </view>
+    </view>
+    <!-- 主题内容 -->
+    <view class="sorts-box">
+    <!-- 左边导航 -->
+      <view class="sorts-left">
+        <view class="sorts-list {{curIndex === index?'on':''}}" wx:for="{{sortsList}}" wx:key="index" bindtap="switchTab" data-id="{{item.listId}}" data-index="{{index}}">
+          {{item.title}}
+        </view>
+      </view>
+      <!-- 右边显示区域 -->
+      <scroll-view class="sorts-right" scroll-y="{{isScroll}}" scroll-into-view="{{toView}}" scroll-with-animation="true">
+        <block wx:for="{{sortsList}}" wx:for-item="item" wx:key="item">
+          <view class="sorts-info" id="{{item.listId}}">
+            <view class="sorts-title">
+              <text>---{{item.title}}---</text>
+            </view>
+            <view class="product">
+              <view class="product-list" wx:for="{{item.shopList}}" wx:for-item="shopItem" wx:key="shopItem">
+                <view bindtap="toShopDetails">
+                  <image src="{{shopItem.shopImg}}"></image>
+                  <view class="classname">
+                    <text>{{shopItem.shopTitle}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
     </view>
 </view>
-

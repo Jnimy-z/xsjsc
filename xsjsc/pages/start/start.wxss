@@ -66,10 +66,10 @@ page{
   margin-left: -500rpx;
   transition: all .35s ease;
 }
-.avaterImg{
+/* .avaterImg{
   width: 100%;
   height: 100%;
-}
+} */
 .avater {
   position: absolute;
   z-index: 2;

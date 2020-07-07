@@ -1,10 +1,20 @@
 {
   "pages": [
-    "pages/start/start",
     "pages/index/index",
-    "pages/sorts/sorts",
+    "pages/more_goods/more_goods",
+    "pages/sale_order/sale_order",
+    "pages/start/start",
     "pages/cart_shop/cart_shop",
+    "pages/template_cart/template_cart",
+    "pages/payment/payment",
+    "pages/details/details",
+    "pages/address/address",
+    "pages/updateAddress/updateAddress",
+    "pages/newAddress/newAddress",
+    "pages/orders/orders",
     "pages/mine/mine",
+    "pages/collection/collection",
+    "pages/sorts/sorts",
     "pages/logs/logs"
   ],
   "window": {

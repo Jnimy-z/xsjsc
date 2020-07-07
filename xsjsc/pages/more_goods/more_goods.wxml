@@ -1,0 +1,22 @@
+<!--pages/more_goods/more_goods.wxml-->
+<view class="container">
+  <block wx:for="{{items}}" wx:key="item">
+    <view class="sale-box" bindtap="toDetail" data-id="{{item.id}}">
+      <view class="left-img">
+        <image src="{{item.imgs}}"></image>
+      </view>
+      <view class="right">
+        <view class="name">
+          <text wx:if="{{item.typename}}" class="typename">{{item.typename}}</text>{{item.name}}
+        </view>
+        <view class="stock" wx:if="{{item.stock == null || item.stock == ''}}">库存：0</view>
+        <view class="stock" wx:else>库存：{{item.stock}}</view>
+        <view class="price-box">
+          <view class="price">￥{{item.price}}</view>
+          <view class="person" wx:if="{{item.number == null || item.number == ''}}">0人付款</view>
+          <view class="person" wx:else>{{item.number}}人付款</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

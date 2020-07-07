@@ -1,1 +1,100 @@
 /* pages/mine/mine.wxss */
+page{
+  height: 100%;
+}
+.container{
+  background-color: #ececec;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* 头部样式布局 */
+.mine-top{
+  width: 100%;
+  height: 230rpx;
+  background-color: #95ebd2;
+  display: flex;
+  flex-direction: row;
+  border-bottom-right-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+.avatar-left{
+  width: 140rpx;
+  height: 140rpx;
+  margin: auto 40rpx;
+}
+.userInfo-avater{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  border-bottom: 2rpx solid rgb(216, 216, 216);
+}
+/* 头部右边样式 */
+.avater-right{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin: auto 0;
+}
+.avatar-right view{
+  margin-bottom: 2rpx;
+  padding: 10rpx 0;
+  font-weight: bold;
+}
+.name-box{
+  display: flex;
+  flex-direction: row;
+}
+.name-box text{
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-right: 10rpx;
+}
+.member .accont{
+  font-size: 28rpx;
+}
+
+/* 主体样式 */
+.mine-content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content{
+  width: 100%;
+  height: auto;
+  border-radius: 20rpx;
+  margin-top: 36rpx;
+}
+.mine-list{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1rpx #999 solid;
+  font-size: 24rpx;
+  background-color: #fff;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.mine-list text{
+  padding-left: 10rpx;
+}
+.mine-list .icon{
+  width: 50rpx;
+  height: 50rpx;
+  padding-top: 15rpx;
+  padding-left: 12rpx;
+  float: left;
+}
+.mine-list .jt{
+  width: 16rpx;
+  height: 24rpx;
+  float: right;
+  padding-top: 28rpx;
+  padding-right: 10rpx;
+}

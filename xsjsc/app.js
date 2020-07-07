@@ -37,7 +37,6 @@ App({
     userInfo: null,
     code: null,
     openid: null,
-    webserver: "http://127.0.0.1/xsjdemo/",
-    webJavaserver: "http://127.0.0.1:8080/xsjsc/wx/"
+    webJavaserver: "http://127.0.0.1:8080/xsjsc/"
   }
 })

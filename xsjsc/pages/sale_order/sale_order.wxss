@@ -1,0 +1,84 @@
+/* pages/sale_order/sale_order.wxss */
+page{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  padding: 0;
+  background-color: rgba(232, 226, 226, 0.849);
+}
+.sale-box{
+  width: 100%;
+  height: 340rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+.left-img{
+  width: 260rpx;
+  height: 260rpx;
+  margin: 30rpx 30rpx;
+}
+.left-img image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 右侧文字 */
+.right{
+  height: 260rpx;
+  width: 420rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2rpx solid rgb(121, 117, 117);
+}
+.right:first-child{
+  border-top: 2rpx solid rgb(121, 117, 117);
+}
+
+.typename{
+  height: 45rpx;
+  line-height: 45rpx;
+  width: auto;
+  background-color: rgb(238, 40, 40);
+  color: #fff;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+.name{
+  /* 文字显示为两行，超出部分用...表示 */
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  padding-right: 40rpx;
+}
+.price-box{
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.price{
+  height: 65rpx;
+  line-height: 65rpx;
+  font-size: 34rpx;
+  color: crimson;
+}
+.person{
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  color: rgb(145, 141, 141);
+}
+.stock{
+  color: rgb(121, 115, 115);
+  font-size: 32rpx;
+}

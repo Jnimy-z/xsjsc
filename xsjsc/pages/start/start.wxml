@@ -2,12 +2,13 @@
 <view class="container">
   <block>
     <image class="logo" src="/images/logo.png"></image>
+    <!-- <open-data type="userAvaterUrl"></open-data> -->
   </block>
   <view class="content">
     <view class="mid_box">
       <view class="avater">
-        <!-- <open-data type="userAvaterUrl"></open-data> -->
-        <image class="avaterImg" bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <open-data type="userAvatarUrl"></open-data>
+        <!-- <image class="avaterImg" bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
       </view>
       <image class="wave" src="/images/wave.png"></image>
       <image class="wave wave-bg" src="/images/wave.png"></image>

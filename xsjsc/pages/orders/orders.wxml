@@ -1,0 +1,94 @@
+<!--pages/orders/orders.wxml-->
+<view class="container">
+  <view class="goods-tab-box">
+    <view class="goods-tab-nav {{curIndex === 0?'on':''}}" bindtap="bindTap" data-index="0">待付款</view>
+    <view class="goods-tab-nav {{curIndex === 1?'on':''}}" bindtap="bindTap" data-index="1">待发货</view>
+    <view class="goods-tab-nav {{curIndex === 2?'on':''}}" bindtap="bindTap" data-index="2">待收货</view>
+    <view class="goods-tab-nav {{curIndex === 3?'on':''}}" bindtap="bindTap" data-index="3">全部订单</view>
+    <view class="goods-content">
+      <view wx:if="{{curIndex === 0}}">
+        <view class="content-box" wx:for="{{orders_noList}}" wx:key="item">
+          <view class="title">收货地址：{{item.address}}</view>
+          <view class="content-item">
+            <view class="item-img" wx:if="{{item.imgs}}">
+              <image src="/images/index/{{item.imgs}}"></image>
+            </view>
+            <view class="item-content">
+              <view class="item-name">{{item.name}}</view>
+              <view class="item-stock">库存：{{item.stock}}<text>{{item.shopNum}}件</text></view>
+              <view class="item-price">￥：{{item.price}}</view>
+            </view>
+          </view>
+          <view class="centent-bottom">共{{item.shopNum}}件商品，产品金额：￥{{item.price* item.shopNum}}</view>
+          <view class="content-botton">
+            <text data-id="{{item.id}}" bindtap="delBtn">取消订单</text>
+            <text data-id="{{item.id}}" bindtap="goPayment">去付款</text>
+          </view>
+        </view>
+        </view>
+        <!-- //待发货 -->
+        <view wx:if="{{curIndex === 1}}">
+        <view class="content-box" wx:for="{{orders_noList}}" wx:key="item">
+          <view class="title">收货地址：{{item.address}}</view>
+          <view class="content-item">
+            <view class="item-img" wx:if="{{item.imgs}}">
+              <image src="/images/index/{{item.imgs}}"></image>
+            </view>
+            <view class="item-content">
+              <view class="item-name">{{item.name}}</view>
+              <view class="item-stock">库存：{{item.stock}}<text>{{item.shopNum}}件</text></view>
+              <view class="item-price">￥：{{item.price}}</view>
+            </view>
+          </view>
+          <view class="centent-bottom">共{{item.shopNum}}件商品，产品金额：￥{{item.price* item.shopNum}}</view>
+        </view>
+        </view>
+      <!-- 待收货 -->
+        <view wx:if="{{curIndex === 2}}">
+        <view class="content-box" wx:for="{{orders_noList}}" wx:key="item">
+          <view class="title">收货地址：{{item.address}}</view>
+          <view class="content-item">
+            <view class="item-img" wx:if="{{item.imgs}}">
+              <image src="/images/index/{{item.imgs}}"></image>
+            </view>
+            <view class="item-content">
+              <view class="item-name">{{item.name}}</view>
+              <view class="item-stock">库存：{{item.stock}}<text>{{item.shopNum}}件</text></view>
+              <view class="item-price">￥：{{item.price}}</view>
+            </view>
+          </view>
+          <view class="centent-bottom">共{{item.shopNum}}件商品，产品金额：￥{{item.price* item.shopNum}}</view>
+          <view class="content-botton">
+            <view data-id="{{item.id}}" bindtap="goReceipt">确认收货</view>
+          </view>
+        </view>
+        </view>
+        <!-- //全部菜单 -->
+        <view wx:if="{{curIndex === 3}}">
+        <view class="content-box" wx:for="{{orders_noList}}" wx:key="item">
+          <view class="title">收货地址：{{item.address}}</view>
+          <view class="content-item">
+            <view class="item-img" wx:if="{{item.imgs}}">
+              <image src="/images/index/{{index.imgs}}"></image>
+            </view>
+            <view class="item-content">
+              <view class="item-name">{{item.name}}</view>
+              <view class="item-stock">库存：{{item.stock}}<text>{{item.shopNum}}件</text></view>
+              <view class="item-price">￥：{{item.price}}</view>
+            </view>
+          </view>
+          <view class="centent-bottom">共{{item.shopNum}}件商品，产品金额：￥{{item.price* item.shopNum}}</view>
+          <view class="content-botton">
+            <text>取消订单</text>
+            <text>去付款</text>
+          </view>
+        </view>
+        </view>
+        </view>
+        <!-- 底部按钮 -->
+        <view class="footer">
+          <view class="left" bindtap="toindex">回首页</view>
+          <view class="right" bindtap="tomine">个人中心</view>
+        </view>
+    </view>
+  </view>
